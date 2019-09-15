@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "52556764599",
+    "firebase_url": "https://artipoint-e66b6.firebaseio.com",
+    "project_id": "artipoint-e66b6",
+    "storage_bucket": "artipoint-e66b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52556764599:android:eba6f283f398f140818432",
+        "android_client_info": {
+          "package_name": "ezy.id.artipoint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52556764599-dl043e7pjr057qvhoah2nfgsosb69lah.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ezy.id.artipoint",
+            "certificate_hash": "8de030680788758e39a97b9238db9211c782ffa5"
+          }
+        },
+        {
+          "client_id": "52556764599-n5uovhu8r53qjrg8kor80v0vif7uf9lj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsTyu3UjGqhGjsDJfGTcMdqns29f_HREc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52556764599-n5uovhu8r53qjrg8kor80v0vif7uf9lj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
