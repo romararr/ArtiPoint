@@ -17,13 +17,14 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/gambarArticle"
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/simba" />
+                    android:src="@drawable/camera" />
 
                 <RelativeLayout
-                    android:id="@+id/header"
+                    android:id="@+id/headerPickImage"
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
                     android:background="#52646464"
@@ -54,8 +55,10 @@
                     android:layout_marginVertical="10dp"
                     android:background="@drawable/bg_rounded_input"
                     android:hint="Judul Artikel..."
-                    android:paddingHorizontal="20dp"
-                    android:paddingVertical="10dp" />
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"
+                    android:paddingVertical="15dp"
+                    android:paddingHorizontal="20dp" />
 
                 <EditText
                     android:id="@+id/deskripsi"
@@ -67,8 +70,8 @@
                     android:hint="Deskripsi..."
                     android:inputType="textMultiLine"
                     android:minLines="6"
-                    android:paddingHorizontal="20dp"
-                    android:paddingVertical="10dp" />
+                    android:paddingVertical="15dp"
+                    android:paddingHorizontal="20dp" />
 
             </LinearLayout>
 
@@ -77,16 +80,16 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/addButton"
+        android:id="@+id/createButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
         android:background="@drawable/bg_rounded_button"
-        android:text="+"
+        android:text="OK"
         android:textColor="#fff"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
 </RelativeLayout>

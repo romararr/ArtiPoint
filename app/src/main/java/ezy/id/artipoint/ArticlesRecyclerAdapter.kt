@@ -1,13 +1,18 @@
 package ezy.id.artipoint
 
+import android.app.Activity
 import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.article_list_item.*
+import kotlinx.android.synthetic.main.article_list_item.gambarArticle
+import kotlinx.android.synthetic.main.create_article.*
 import kotlin.math.log
 
 class ArticlesRecyclerAdapter(private val context: Context, private val items: ArrayList<Articles>) :
@@ -26,6 +31,10 @@ class ArticlesRecyclerAdapter(private val context: Context, private val items: A
         fun bindItem(item: Articles) {
             judulArticleTxt.text = item.judul
             descArticleTxt.text = item.deskripsi
+            Glide.with(containerView)
+                .setDefaultRequestOptions(RequestOptions().placeholder(R.drawable.camera))
+                .load(item.pathGambar)
+                .into(gambarArticle)
         }
 
     }

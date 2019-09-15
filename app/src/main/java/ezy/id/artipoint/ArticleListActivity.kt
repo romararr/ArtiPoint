@@ -1,8 +1,10 @@
 package ezy.id.artipoint
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
@@ -17,6 +19,7 @@ class ArticleListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.article_list)
 
+        // MENGAMBIL DATA DARI DATABASE FIREBASE
         ref = FirebaseDatabase.getInstance().getReference("Articles")
 
         ref.addValueEventListener(object : ValueEventListener {
@@ -41,5 +44,20 @@ class ArticleListActivity : AppCompatActivity() {
                 }
             }
         })
+
+        // MENAMPILKAN JIKA DATA KOSONG
+//        if (articles.isEmpty()) {
+//            recyclerArticle.setVisibility(View.GONE);
+//            empty_view.setVisibility(View.VISIBLE);
+//        }
+//        else {
+//            recyclerArticle.setVisibility(View.VISIBLE);
+//            empty_view.setVisibility(View.GONE);
+//        }
+
+        // KE HALAMAN MEMBUAT ARTIKEL
+        addButton.setOnClickListener {
+            startActivity(Intent(this, CreateArticleActivity::class.java))
+        }
     }
 }

@@ -16,7 +16,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/simba"/>
+            android:src="@drawable/simba"
+            android:background="@drawable/bg_rounded_input"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
