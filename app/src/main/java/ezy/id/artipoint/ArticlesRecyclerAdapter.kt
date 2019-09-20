@@ -2,7 +2,7 @@ package ezy.id.artipoint
 
 import android.app.Activity
 import android.content.Context
-import android.util.Log
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,7 +24,12 @@ class ArticlesRecyclerAdapter(private val context: Context, private val items: A
     override fun getItemCount(): Int = items.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
         holder.bindItem(items.get(position))
+        holder.itemList.setOnClickListener {
+            val intent = Intent(context, DetailArticle::class.java)
+            intent.putExtra("ARTICLE", items[position])
+        }
     }
 
     class ViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer {
@@ -36,6 +41,5 @@ class ArticlesRecyclerAdapter(private val context: Context, private val items: A
                 .load(item.pathGambar)
                 .into(gambarArticle)
         }
-
     }
 }

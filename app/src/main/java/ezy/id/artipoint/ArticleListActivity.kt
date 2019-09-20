@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.article_list.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ArticleListActivity : AppCompatActivity() {
 
@@ -60,4 +62,5 @@ class ArticleListActivity : AppCompatActivity() {
             startActivity(Intent(this, CreateArticleActivity::class.java))
         }
     }
+
 }
